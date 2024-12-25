@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC CBIT Team</title>
+  <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Navbar Hover Effects */
+    nav ul li a:hover {
+      color: #77F2A1; /* Light Mint Green */
+      text-shadow: 0px 0px 10px rgba(119, 242, 161, 0.8);
+    }
+
+    /* Mobile Menu Button Hover */
+    #menu-btn:hover {
+      color: #77F2A1; /* Light Mint Green */
+      text-shadow: 0px 0px 10px rgba(119, 242, 161, 0.8);
+    }
+
+    /* Navbar Background Gradient */
+    header {
+      background: linear-gradient(135deg, #192442, #4F76F6, #45D3A1);
+      position: fixed;
+      width: 100%;
+      z-index: 50;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mobile Menu Background */
+    #mobile-menu {
+      background: linear-gradient(135deg, #8553F4, #FB81BE);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    /* Desktop Navbar Items */
+    nav ul {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      nav ul {
+        display: flex;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Body Background */
+    body {
+      background: linear-gradient(90deg, #192442, #4F76F6, #8553F4);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Team Section Styles */
+    .team {
+      padding: 6rem 1em 3em;
+      text-align: center;
+    }
+
+    .team h1 {
+      font-size: 2.5em;
+      margin-bottom: 2em;
+      font-weight: bold;
+    }
+
+    .team-row {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+    }
+
+    .team-row.single {
+      justify-content: center;
+    }
+
+    .team-member {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #4F76F6;
+    }
+
+    .team-member h3 {
+      margin: 0.5em 0 0.2em;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .team-member p {
+      font-size: 0.9em;
+      color: #FB81BE;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Navbar -->
+  <header>
+    <nav class="flex items-center justify-between px-8 py-4">
+      <a href="#" class="text-2xl text-white font-bold">DSC CBIT</a>
+      <ul class="hidden md:flex text-lg md:space-x-6 lg:space-x-8 xl:space-x-10">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">Projects</a></li>
+        <li><a href="#" class="hover:text-gray-300">Team</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden block text-2xl text-gray-300">&#9776;</button>
+    </nav>
+    <ul id="mobile-menu" class="hidden w-full text-center space-y-4 py-4 md:hidden">
+      <li><a href="#" class="block hover:text-gray-300">Home</a></li>
+      <li><a href="#" class="block hover:text-gray-300">Projects</a></li>
+      <li><a href="#" class="block hover:text-gray-300">Team</a></li>
+      <li><a href="#" class="block hover:text-gray-300">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Team Section -->
+  <section class="team">
+    <h1>Team 2023-24</h1>
+
+    <!-- Row 1: President -->
+    <div class="team-row single">
+      <div class="team-member">
+        <img src="images\Yash.jpg" alt="President">
+        <h3>President</h3>
+        <p>Yash Talpallikar</p>
+      </div>
+      <div class="team-member">
+        <img src="vice-president.jpg" alt="President">
+        <h3>Vice-President</h3>
+        <p>Aryaman Gajrani</p>
+      </div>
+    </div>
+
+    <!-- Row 2: Advisor & General Secretary -->
+    <div class="team-row">
+      <div class="team-member">
+        <img src="images\karthikeya.png" alt="Advisor">
+        <h3>Technical Head</h3>
+        <p>Karthikeya Boorla</p>
+      </div>
+      <div class="team-member">
+        <img src="gen_sec.jpg" alt="General Secretary">
+        <h3>General Secretary</h3>
+        <p>Seema</p>
+      </div>
+    </div>
+
+    <!-- Row 3: AI Lead & Co-Lead -->
+    <div class="team-row">
+      <div class="team-member">
+        <img src="images\Gayatri Naga Soujanya.jpg" alt="AI Lead">
+        <h3>AI Lead</h3>
+        <p>Prakki Gayatri Naga Soujanya</p>
+      </div>
+      <div class="team-member">
+        <img src="images\Shaik Abdullah.jpg" alt="AI Co-Lead">
+        <h3>AI Co-Lead</h3>
+        <p>Shaik Abdullah</p>
+      </div>
+    </div>
+
+    <!-- Row 4: CP Lead & Co-Lead -->
+    <div class="team-row">
+      <div class="team-member">
+        <img src="cp_lead.jpg" alt="CP Lead">
+        <h3>CP Lead</h3>
+        <p>Rushikesh Cheedalla</p>
+      </div>
+      <div class="team-member">
+        <img src="cp_colead.jpg" alt="CP Co-Lead">
+        <h3>CP Co-Lead</h3>
+        <p>MD Salman</p>
+      </div>
+    </div>
+
+    <!-- Row 4: CP Lead & Co-Lead -->
+    <div class="team-row">
+        <div class="team-member">
+          <img src="images\Abhiram.jpg" alt="wd Lead">
+          <h3>Web-Dev Lead</h3>
+          <p>Konda Abhiram Goud</p>
+        </div>
+        <div class="team-member">
+          <img src="images\Nitheesha.jpg" alt="CP Co-Lead">
+          <h3>Web-Dev Co-Lead</h3>
+          <p>Nitheesha Patel</p>
+        </div>
+    </div>
+
+    <!-- Row 5: Non-Technical Head -->
+    <div class="team-row single">
+      <div class="team-member">
+        <img src="images\Varshith Non-Tech Head.jpg" alt="Non-Technical Head">
+        <h3>Non-Technical Head</h3>
+        <p>G Varshith Reddy</p>
+      </div>
+    </div>
+
+    <div class="team-row">
+        <div class="team-member">
+          <img src="images\Tejasree Jilla .jpg" alt="gd Lead">
+          <h3>GD Lead</h3>
+          <p>Tejasree Jilla</p>
+        </div>
+        <div class="team-member">
+          <img src="images\Shiva pratheek.jpg" alt="gd Co-Lead">
+          <h3>GD Co-Lead</h3>
+          <p>Shiva Pratheek</p>
+        </div>
+    </div>
+
+    <div class="team-row">
+        <div class="team-member">
+          <img src="images\Greeshma Bannaie.jpg" alt="pr Lead">
+          <h3>PR Lead</h3>
+          <p>Bannaie Greeshma</p>
+        </div>
+        <div class="team-member">
+          <img src="images\Krish Ramoju.png" alt="pr Co-Lead">
+          <h3>PR Co-Lead</h3>
+          <p>Krish Ramoju</p>
+        </div>
+    </div>
+  </section>
+
+  <script>
+    // Toggle Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
