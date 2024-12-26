@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBIT Developer Student Club</title>
+  <link rel="icon" href="images\logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    @media (max-width: 640px) {
+    h1 {
+      margin-top: 120px !important; /* Add significant space on small screens */
+    }
+  }
+  /* Default styles for larger screens */
+.hero-heading {
+  font-size: 3rem; /* Large screens */
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 2.5rem; /* Slightly smaller for tablets */
+    margin-top: 60px;
+  }
+}
+
+/* Small screens (Mobile phones) */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem; /* Adjusted for smartphones */
+    margin-top: 90px;
+  }
+}
+
+/* Very Small screens (iPhone SE, older phones) */
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.25rem; /* Optimized for small devices */
+    margin-top: 120px !important; /* Ensures enough spacing */
+  }
+}
+
+/* Extra Small screens (Tiny devices) */
+@media (max-width: 375px) {
+  .hero-heading {
+    font-size: 1.5rem; /* Smallest font size for tiny screens */
+    margin-top: 140px !important; /* Extra spacing */
+  }
+}
+
+
+  </style>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-teal-400 text-white">
+
+  <!-- Navbar -->
+  <header class="bg-transparent fixed w-full z-50">
+    <nav class="flex items-center justify-between px-8 py-4">
+        <a href="#" class="text-2xl text-white font-bold">DSC CBIT</a>
+          
+      <ul class="hidden md:flex text-lg md:space-x-6 lg:space-x-8 xl:space-x-10">
+        <li><a href="Home.html" class="hover:text-teal-300">Home</a></li>
+        <li><a href="projects.html" class="hover:text-teal-300">Projects</a></li>
+        <li><a href="team.html" class="hover:text-teal-300">Team</a></li>
+        <li><a href="#" class="hover:text-teal-300">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden block text-2xl">&#9776;</button>
+    </nav>
+    <ul id="mobile-menu" class="hidden bg-blue-600 w-full text-center space-y-4 py-4 md:hidden">
+      <li><a href="Home.html" class="block hover:text-teal-300">Home</a></li>
+      <li><a href="projects.html" class="block hover:text-teal-300">Projects</a></li>
+      <li><a href="team.html" class="block hover:text-teal-300">Team</a></li>
+      <li><a href="#" class="block hover:text-teal-300">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col items-center justify-center min-h-screen text-center px-6">
+    <h1 class="hero-heading font-bold mb-4">Empowering the New Era of Developers</h1>
+    <div class="flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 max-w-screen-xl mx-auto">
+        <p class="text-base md:text-lg leading-relaxed text-gray-600 text-center mb-6">
+          The <strong>CBIT Developer Student Club (CBIT DSC)</strong> is a vibrant and dynamic student-led community at 
+          <strong>Chaitanya Bharathi Institute of Technology - Hyderabad</strong>. Our mission is to cultivate innovation 
+          and foster technical skills among students by exploring the latest trends in technology and development.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600 text-center mb-6">
+          CBIT DSC organizes a variety of engaging events such as <strong>coding competitions</strong>, 
+          <strong>developer bootcamps</strong>, <strong>interactive workshops</strong>, and <strong>tech talks</strong>. 
+          These events are designed to provide students with hands-on experience in domains like <strong>app development</strong>, 
+          <strong>web technologies</strong>, <strong>artificial intelligence</strong>, and <strong>Competative Coding</strong>.
+        </p>
+      </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="bg-gradient-to-r from-blue-500 to-teal-400 text-white py-10">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Projects</h2>
+      <div id="projects-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="images/project-placeholder.jpg" alt="AI Assistant" class="card-image">
+          <div class="card-details">
+            <p class="text-title">AI Assistant</p>
+            <p class="text-body">Natural language processing bot for student queries.<br><br>Python TensorFlow NLP</p>
+          </div>
+          <button class="card-button">More info</button>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="images/project-placeholder.jpg" alt="Campus Connect" class="card-image">
+          <div class="card-details">
+            <p class="text-title">Campus Connect</p>
+            <p class="text-body">Social platform for campus activities and events.<br><br>React Node.js MongoDB</p>
+          </div>
+          <button class="card-button">More info</button>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="images/project-placeholder.jpg" alt="Smart Campus" class="card-image">
+          <div class="card-details">
+            <p class="text-title">Smart Campus</p>
+            <p class="text-body">IoT-based campus monitoring system.<br><br>Arduino IoT Flutter</p>
+          </div>
+          <button class="card-button">More info</button>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 py-6 text-center text-sm">
+    <p>&copy; 2024 CBIT Developer Club. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
